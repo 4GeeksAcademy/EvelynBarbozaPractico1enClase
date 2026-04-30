@@ -62,7 +62,7 @@ body {
 .logo h1 {
     font-size: 24px;
     font-weight: 700;
-    font-family: 'Playfair Display', serif;
+    font-family: "Aboreto", system-ui;
     color: #778899;
     letter-spacing: -0.5px;
 }
@@ -78,7 +78,7 @@ body {
     color: #778899;
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Playfair Display', serif;
+    font-family: "Aboreto", system-ui;
     transition: all 0.3s ease;
     position: relative;
     padding: 5px 0;
@@ -91,18 +91,36 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #ff69b4;
+    background-color: #69b7ff;
     transition: width 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-    color: #ff69b4;
+    color: #69b7ff;
 }
 
 .nav-link:hover::after,
 .nav-link:focus::after {
     width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #778899;
+    transition: 0.3s;
 }
 
 /* ============================================
@@ -113,11 +131,11 @@ body {
     margin-top: 70px;
     min-height: calc(100vh - 70px);
     width: 100%;
-    background: linear-gradient(135deg, #e6e6fa 0%, #f0e68c 50%, #dda0dd 100%);
+   
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px 60px;
+    padding: 40px 0 60px 20px;
     position: relative;
     overflow: hidden;
 }
@@ -130,7 +148,7 @@ body {
 
 .hero-content {
     flex: 1 1 420px;
-    max-width: 460px;
+    /*max-width: 460px;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,15 +158,13 @@ body {
 .hero-image {
     flex: 1 1 420px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .featured-artwork {
-    max-width: 100%;
-    max-height: 100%;
-    width: 100%;
-    height: auto;
+    height: 80vh;
+    width: 100vh;
     border-radius: 10px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     object-fit: cover;
@@ -157,7 +173,7 @@ body {
 .hero-title {
     font-size: 48px;
     font-weight: 700;
-    font-family: 'Playfair Display', serif;
+    font-family: "Aboreto", system-ui;
     color: #778899;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 12px;
@@ -165,7 +181,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 300;
     color: #778899;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
@@ -252,7 +268,7 @@ section {
 .section-title {
     font-size: 38px;
     font-weight: 800;
-    font-family: 'Playfair Display', serif;
+    font-family: "Aboreto", system-ui;
     color: #778899;
     text-align: center;
     margin-bottom: 10px;
@@ -346,7 +362,7 @@ section {
    ============================================ */
 
 .sobre-mi {
-    background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);
+     background: linear-gradient(135deg, #e0f7ff 0%, #b3d0de 100%)
 }
 
 .about-grid {
@@ -410,12 +426,12 @@ section {
 .timeline-date {
     width: 76px;
     height: 76px;
-    background: linear-gradient(135deg, #d4a574 0%, #c4945f 100%);
+    background: linear-gradient(135deg, #e0f7ff 0%, #a2d1e6 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #778899;
     font-weight: 800;
     font-size: 18px;
     box-shadow: 0 5px 18px rgba(212, 165, 116, 0.3);
@@ -455,7 +471,7 @@ section {
    ============================================ */
 
 .servicios {
-    background: linear-gradient(135deg, #e8d5c4 0%, #d9c7b5 100%);
+   background: linear-gradient(135deg, #e0f7ff 0%, #b3d0de 100%)
 }
 
 .services-grid {
@@ -510,7 +526,7 @@ section {
    ============================================ */
 
 .eventos {
-    background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
+    background:white;
 }
 
 .events-container {
@@ -565,7 +581,7 @@ section {
    ============================================ */
 
 .faq {
-    background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);
+    background: linear-gradient(135deg, #e0f7ff 0%, #b3d0de 100%)
 }
 
 .faq-container {
@@ -655,7 +671,7 @@ section {
    ============================================ */
 
 .contacto {
-    background: linear-gradient(135deg, #d9c7b5 0%, #c4b5a3 100%);
+     background: linear-gradient(135deg, #e0f7ff 0%, #b3d0de 100%)
 }
 
 .contact-methods {
@@ -696,7 +712,7 @@ section {
 
 .contact-link {
     display: inline-block;
-    background: linear-gradient(135deg, #d4a574 0%, #c4945f 100%);
+     background: linear-gradient(135deg, #e0f7ff 0%, #9fcbe1 100%)
     color: white;
     padding: 10px 24px;
     border-radius: 6px;
@@ -783,19 +799,34 @@ section {
     .navbar-container {
         padding: 0 15px;
         height: 60px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 228, 225, 0.95);
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        padding: 10px 0;
+        gap: 15px;
+    }
+
+    .nav-toggle:checked ~ .nav-menu {
+        display: flex;
     }
 
     .logo h1 {
         font-size: 18px;
-    }
-
-    .nav-menu {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        width: 100%;
     }
 
     .nav-link {
@@ -829,6 +860,13 @@ section {
         flex: 0 1 auto;
         width: 100%;
         max-width: 400px;
+        justify-content: center;
+    }
+
+    .featured-artwork {
+        height: auto;
+        width: 100%;
+        max-height: 50vh;
     }
 
     section {
@@ -845,6 +883,7 @@ section {
 
     .section-title {
         font-size: 32px;
+        font-family: "Aboreto", system-ui;
         margin-bottom: 8px;
     }
 
@@ -1061,6 +1100,7 @@ section {
 
     .section-title {
         font-size: 24px;
+        font-family: "Aboreto", system-ui;
         margin-bottom: 6px;
     }
 
